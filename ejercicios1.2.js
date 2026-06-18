@@ -1,4 +1,4 @@
-/*//Ejercicio 3
+//Ejercicio 3
 const usuarios = [
   { nombre: 'Ana', edad: 25, rol: 'admin', activo: true },
   { nombre: 'Carlos', edad: 17, rol: 'user', activo: true },
@@ -54,11 +54,11 @@ const puedeeditar = usuario => mayoredad(usuario) || esactivo(usuario) || esadmi
 const usuarioeditor = usuarios.find(puedeeditar)
 console.log('usuario puede editar: ', usuarioeditor);
 
-*/
 
 
 
-// ejercicios 4.1
+
+/*/ ejercicios 4.1
 
 const clientes = [{ nombre: 'Luis', historialLimpio: true, ingresosEstables: true },
 { nombre: 'María', historialLimpio: true, ingresosEstables: false },
@@ -125,3 +125,4 @@ const buencliente = cliente => ingresosEstables(cliente) && historialLimpio(clie
 const BuenCliente = clientes.filter(buencliente);
 console.log('Clientes buenos:', BuenCliente);
 
+*/
