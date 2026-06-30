@@ -12,23 +12,22 @@ console.log (Object.keys(datos))
 console.log(Object.getOwnPropertyNames(datos))
 
 
-function deepFreeze(obj){
-    //validar que sea un objeto
-    if (obj ===null || typeof obj !== 'object' || Object.isFrozen(obj)){
+function deepFreeze(obj) {
+    if (obj === null || typeof obj !== 'object' || Object.isFrozen(obj)) {
         return obj
-    } 
-    //obtener todo el objeto
-    const propiedadesobjeto =Object.getOwnPropertyNames(obj)
-    //recorrer cada una de las propiedades
-    for(let nombre of propiedadesobjeto){
-        const propiedadHijo= obj[nombre]
-        //aplicar la funcion recursiva
-        if(propiedadHijo && typeof propiedadHijo==='object'){
-            deepFreeze(propiedadHijo)
-        } 
     }
-    //congelamos todo el objeto con sus hijos
-return Object.freeze(obj)
+
+    const propiedadesObjeto = Object.getOwnPropertyNames(obj)
+
+    for (let nombres of propiedadesObjeto) {
+        const propiedadHijo = obj[nombres]
+
+        if (propiedadHijo && typeof propiedadHijo === 'object') {
+            deepFreeze(propiedadHijo)
+        }
+    }
+
+    return Object.freeze(obj)
 }
 
 
